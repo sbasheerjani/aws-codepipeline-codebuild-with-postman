@@ -4,13 +4,13 @@ Resources:
   PetStoreAPI:
     Type: AWS::Serverless::Api
     Properties:
-      StageName: prod
+      StageName: dev
       DefinitionUri: petstore-swagger.json
     
 Outputs:
 
     PetStoreAPI:
-      Description: "Root API endpoint URL for Prod stage"
-      Value: !Sub "https://${PetStoreAPI}.execute-api.${AWS::Region}.amazonaws.com/prod"
+      Description: "Root API endpoint URL for Dev stage"
+      Value: !Sub "https://${PetStoreAPI}.execute-api.${AWS::Region}.amazonaws.com/dev"
       Export:
         Name: PetStoreAPIRoot
